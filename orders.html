@@ -1,23 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Loading…</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HVAC Fab Shop Order Form</title>
 
-  <!-- Hard redirect (bypasses cookie/auth issues) -->
-  <script>
-    window.location.href = "https://script.google.com/macros/s/AKfycbyjV266UQwWuf_xitCY0XgHhewfehTcDprdw-Bml6sxy3VIjzlWcF-JhVWiK41Q014yjw/exec";
-  </script>
-
-  <!-- Fallback for older browsers -->
+  <!-- Meta refresh as a backup redirect -->
   <meta http-equiv="refresh"
-        content="0;url=https://script.google.com/macros/s/AKfycbyjV266UQwWuf_xitCY0XgHhewfehTcDprdw-Bml6sxy3VIjzlWcF-JhVWiK41Q014yjw/exec">
+        content="0; url=https://script.google.com/macros/s/AKfycbyjV266UQwWuf_xitCY0XgHhewfehTcDprdw-Bml6sxy3VIjzlWcF-JhVWiK41Q014yjw/exec" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .message {
+      margin-top: 20px;
+      color: #333;
+    }
+    a {
+      color: #e6a530;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  Redirecting to the B&amp;M Fab Shop Order Form…
-  <br><br>
-  <a href="https://script.google.com/macros/s/AKfycbyjV266UQwWuf_xitCY0XgHhewfehTcDprdw-Bml6sxy3VIjzlWcF-JhVWiK41Q014yjw/exec">
-    Tap here if not redirected automatically
-  </a>
+  <div class="message">
+    Redirecting you to the HVAC Fab Shop Order Form…<br />
+    If nothing happens,
+    <a href="https://script.google.com/macros/s/AKfycbyjV266UQwWuf_xitCY0XgHhewfehTcDprdw-Bml6sxy3VIjzlWcF-JhVWiK41Q014yjw/exec">
+      click here
+    </a>.
+  </div>
+
+  <script>
+    (function () {
+      var target = "https://script.google.com/macros/s/AKfycbyjV266UQwWuf_xitCY0XgHhewfehTcDprdw-Bml6sxy3VIjzlWcF-JhVWiK41Q014yjw/exec";
+
+      // Use replace so the intermediate /orders page doesn’t clutter history
+      try {
+        window.location.replace(target);
+      } catch (e) {
+        // Fallback if replace is blocked for any reason
+        window.location.href = target;
+      }
+    })();
+  </script>
 </body>
 </html>
